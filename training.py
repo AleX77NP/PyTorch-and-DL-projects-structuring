@@ -110,7 +110,7 @@ if __name__ == '__main__':
     correct = 0
     total = 0
 
-    with torch.no_grad():
+    with torch.no_grad():  # no gradients since this is a test data
         for data in testloader:
             images, labels = data
             outputs = net(images)
